@@ -8,6 +8,7 @@ public class Root : MonoBehaviour
     void Start()
     {
         PanelMgr.instance.OpenPanel<LoginPanel>("");
+        PanelMgr.instance.OpenPanel<TipPanel>("", "测试", "测试文本");
         DontDestroyOnLoad(gameObject);
     }
 

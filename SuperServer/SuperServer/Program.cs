@@ -13,8 +13,6 @@ namespace SuperServer
     {
         static void Main(string[] args)
         {
-         
-
 
             Console.WriteLine("Hello World");
             DataMgr dataMgr = new DataMgr();
