@@ -116,6 +116,17 @@ public class Connection
         }
     }
 
+    public bool Send(string protoName) 
+    {
+        return Send(new ProtocolBytes(protoName));
+    }
+
+    public bool Send(string protoName, MsgDistribution.Delegate cb)
+    {
+        return Send(new ProtocolBytes(protoName),cb);
+    }
+
+
     //发送协议
     public bool Send(ProtocolBase protocol)
     {

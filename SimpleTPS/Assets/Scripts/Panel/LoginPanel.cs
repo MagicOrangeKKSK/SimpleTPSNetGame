@@ -71,6 +71,7 @@ public class LoginPanel : PanelBase
         {
             //之后改用Tip 来提示用户
             Debug.Log("用户名密码不能为空");
+            PanelMgr.instance.OpenPanel<TipPanel>("", "警告", "用户名密码不能为空");
             return;
         }
 
@@ -81,6 +82,7 @@ public class LoginPanel : PanelBase
             int port = 1234;
             NetMgr.srvConn.proto = new ProtocolBytes();
             NetMgr.srvConn.Connect(host,port);
+            PanelMgr.instance.OpenPanel<TipPanel>("", "警告", "请检查网络连接是否正常");
             Debug.Log("连接成功");
         }
 
@@ -107,11 +109,15 @@ public class LoginPanel : PanelBase
         if(ret == 0)
         {
             Debug.Log("登陆成功:"+ idInput.text);
-            StartCoroutine(StartGameDelay(idInput.text));
+            //StartCoroutine(StartGameDelay(idInput.text));
+            PanelMgr.instance.OpenPanel<RoomListPanel>("");
+            GameMgr.instance.id = idInput.text;
+            Close();
         }
         else
         {
             Debug.Log("登陆失败");
+            PanelMgr.instance.OpenPanel<TipPanel>("", "警告", "用户名或密码错误");
         }
     }
 

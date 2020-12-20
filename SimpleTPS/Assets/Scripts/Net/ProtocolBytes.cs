@@ -6,6 +6,16 @@ public class ProtocolBytes : ProtocolBase
 {
     public byte[] bytes;
 
+    public ProtocolBytes()
+    {
+
+    }
+
+    public ProtocolBytes(string protoName)
+    {
+        AddString(protoName);
+    }
+
     public override ProtocolBase Decode(byte[] readbuff, int start, int length)
     {
         ProtocolBytes protocol = new ProtocolBytes();

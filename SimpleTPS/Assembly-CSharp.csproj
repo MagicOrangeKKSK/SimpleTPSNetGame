@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\GameMgr.cs" />
     <Compile Include="Assets\Scripts\Helper\EventListener.cs" />
     <Compile Include="Assets\Scripts\Helper\TransformHelper.cs" />
     <Compile Include="Assets\Scripts\Net\Connection.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Assets\Scripts\Panel\PanelBase.cs" />
     <Compile Include="Assets\Scripts\Panel\PanelMgr.cs" />
     <Compile Include="Assets\Scripts\Panel\RegPanel.cs" />
+    <Compile Include="Assets\Scripts\Panel\RoomListPanel.cs" />
+    <Compile Include="Assets\Scripts\Panel\RoomPanel.cs" />
     <Compile Include="Assets\Scripts\Panel\TipPanel.cs" />
     <Compile Include="Assets\Scripts\Player\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Player\Walk.cs" />

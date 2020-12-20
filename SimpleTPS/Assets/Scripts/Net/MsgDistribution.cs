@@ -9,7 +9,7 @@ public class MsgDistribution
     //消息列表
     public List<ProtocolBase> msgList = new List<ProtocolBase>();
     //委托类型
-    public delegate void Delegate(ProtocolBase proto);
+    public delegate void Delegate(ProtocolBase protocol);
     //事件监听表
     private Dictionary<string, Delegate> eventDict = new Dictionary<string, Delegate>();
 

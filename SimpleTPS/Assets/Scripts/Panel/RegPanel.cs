@@ -53,6 +53,7 @@ public class RegPanel : PanelBase
         {
             //之后改用Tip 来提示用户
             Debug.Log("用户名密码不能为空");
+            PanelMgr.instance.OpenPanel<TipPanel>("", "警告", "用户名密码不能为空");
             return;
         }
 
@@ -91,6 +92,7 @@ public class RegPanel : PanelBase
         else
         {
             Debug.Log("注册失败");
+            PanelMgr.instance.OpenPanel<TipPanel>("", "警告", "该用户名已存在");
         }
     }
 

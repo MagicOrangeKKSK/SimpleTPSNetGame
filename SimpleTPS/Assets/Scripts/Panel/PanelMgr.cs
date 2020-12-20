@@ -81,6 +81,11 @@ public class PanelMgr : MonoBehaviour
         Component.Destroy(panel);  //销毁组件
     }
 
+    public static void ShowTip(string text)
+    {
+        instance.OpenPanel<TipPanel>("", "提示", text);
+    }
+
     public enum PanelLayer
     {
         //面板
